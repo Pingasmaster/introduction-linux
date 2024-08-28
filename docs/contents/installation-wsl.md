@@ -93,10 +93,10 @@ For this step, you will need to have a folder in your MacOS that you want to sha
 6. Now you can turn on your Debian OS by clicking on the *Play* button.
 7. Log in, then on your desktop you should find a *Volume Disk* named `share`. Double click on it and you should retrieve the folder you shared from MacOS.
 8. In this file explorer window, right click and choose *Open in Terminal Here*. Then type the following command:
-```bash
-sudo touch file.txt
-```
 
+    ```bash
+    sudo touch file.txt
+    ```
     !!! note "`sudo` ?"
         The `sudo` command allows you to execute the command that follows it as an administrator. You will be asked for your password (once per session).
 

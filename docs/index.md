@@ -16,27 +16,28 @@ This module will be taught in 15 hours as a Lab/Lecture sessions.
 
 -   Week 36: 3 hours of lab work
 -   Week 37: 3 hours of lab work
--   Week 38: 3 hours of lab work
--   Week 39: 3 hours of lab work + 25 minutes of evaluation (CC)
--   Week 40: 2 hours of lab work
+-   Week 38: 3 hours of lab work + 25 minutes of evaluation (CC)
+-   Week 39: 3 hours of lab work  
+-   Week 40: 2 hours of lab work including 1 hour of evaluation (TP noté)
 -   Week 41: 1 hour of final examination (DE)
 
 ### Group repartition
 
 | Group     | Teacher                   | Contact    |
 |-----------|---------------------------|------------|
-| A         | Zouhour Guiras            | zouhour.guiras@intervenants.efrei.net           |
-| B         | Halim Djerroud            | halim.djerroud@intervenants.efrei.net       |
-| C         | Borhene Eddine Dakkar     | borhen-eddine.dakkar@intervenants.efrei.net       |
-| D         | Zouhour Guiras            | zouhour.guiras@intervenants.efrei.net       |
-| E         | Mourad Kmimech            | mourad.kmimech@efrei.fr       |
-| F         | Rado Rakotonarivo         | rado.rakotonarivo@efrei.fr       |
-| P         | Nathalie Xiaodan Chin     | nathalie.xiaodan-chin@intervenants.efrei.net       |
-| BN        | Nathalie Xiaodan Chin     | nathalie.xiaodan-chin@intervenants.efrei.net       |
-| BDX       | John Dreyfus              | john.dreyfus@intervenants.efrei.net       |
-| INT1      | Rostom Kachouri           | rostom.kachouri@intervenants.efrei.net        |
-| INT2      | Nathalie Xiaodan Chin     | nathalie.xiaodan-chin@intervenants.efrei.net       |
-| INT3      | Rado Rakotonarivo         | rado.rakotonarivo@efrei.fr       |
+| A         | Michel Landschoot         | mlandsnet@yahoo.fr      |
+| B         | Michel Landschoot         | mlandsnet@yahoo.fr      |
+| C         | Zouhour Guiras            | zouhour.guiras@intervenants.efrei.net           |
+| D         | Michel Landschoot         | mlandsnet@yahoo.fr      |
+| E         | Nathalie Xiaodan Chin     | nathalie.xiaodan-chin@intervenants.efrei.net       |
+| F         | Halim Djerroud            | halim.djerroud@intervenants.efrei.net       |
+| BN        | Zouhour Guiras            | zouhour.guiras@intervenants.efrei.net       |
+| PP        | Yvan Guifo Fodjo          | yvan.guifo-fodjo@efrei.fr      |
+| PM        | Yvan Guifo Fodjo          | yvan.guifo-fodjo@efrei.fr      |
+| BDX       | Mikaël Valot              | mikael.valot@efrei.fr       |
+| INT1      | Yaovi Soglo           | yaovi.soglo@efrei.fr       |
+| INT2      | Rado Rakotonarivo         | rado.rakotonarivo@efrei.fr       |
+| INT3      | Yaovi Soglo           | yaovi.soglo@efrei.fr       |
 
 
 
