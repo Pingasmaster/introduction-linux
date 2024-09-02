@@ -6,12 +6,12 @@ title: Lab1 - First commands
 
 !!! info "General instructions"
     
-        - In all exercises, the `$ ` chain at the beginning of the line represents the command prompt and should not be typed.
-        - For now, each time you open a terminal, you are prompted to enter the following command, (followed, as always, by the enter key) for pedagogical reasons:
+    - In all exercises, the `$ ` chain at the beginning of the line represents the command prompt and should not be typed.
+    - For now, each time you open a terminal, you are prompted to enter the following command, (followed, as always, by the enter key) for pedagogical reasons:
 
-        ```bash
-        $ PS1='$ '
-        ```
+    ```bash
+    $ PS1='$ '
+    ```
 
 ### Exercise 1 : First commands
 
