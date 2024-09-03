@@ -17,7 +17,7 @@ title: Lab1 - First commands
 
 !!! tip "What is a command ?"
 
-    A *command*  is a sequence of words ending with a newline character. That is, a command is a sequence of characters that ends with the `<Enter>` key. The first word is the name of the command, the others are its *arguments*. The command is executed by the shell, which is a program that interprets the command line.
+    A *command*  is a sequence of words ending with a newline character. That is, a command is a sequence of characters that ends with the <kbd>⏎ Enter</kbd> key. The first word is the name of the command, the others are its *arguments*. The command is executed by the shell, which is a program that interprets the command line.
 
     ```bash
     $ touch file.txt
@@ -41,13 +41,13 @@ $ uname -mrs
 $ echo Hello, world!
 $ echo       Hello,        world!
 ```
-2. Press on the right arrow key of your keyboard or `C-p` (the `Ctrl` key at the same time as the `p` key) several times, until the command `who` is displayed. Now press the down arrow key or type `C-n` until the command `uname -m -r` is displayed and then press enter. Note what these shortcuts are for and learn them.
-3. Press `C-l`. Note what this shortcut is for and learn it.
+2. Press on the right arrow key of your keyboard or <kbd>Ctrl</kbd> + <kbd>P</kbd> (the <kbd>Ctrl</kbd> key at the same time as the <kbd>P</kbd> key) several times, until the command `who` is displayed. Now press the down arrow key or type <kbd>Ctrl</kbd> + <kbd>N</kbd> until the command `uname -m -r` is displayed and then press enter. Note what these shortcuts are for and learn them.
+3. Press <kbd>Ctrl</kbd> + <kbd>L</kbd>. Note what this shortcut is for and learn it.
 4. Without explicitly write the command, display the command `cal 3 2022`, *without executing it* (i.e. without pressing enter).
-5. Press `C-u`. Note what this shortcut is for and learn it.
-6. Display again the command `uname`, without typing it nor executing it. Then press `C-d`. What happened ?
-7. Clear the current command line with a keyboard shortcut and then type `C-d`. What happened ?
-8. Open again a terminal and type `C-p` several times. Comment.
+5. Press <kbd>Ctrl</kbd> + <kbd>D</kbd>. Note what this shortcut is for and learn it.
+6. Display again the command `uname`, without typing it nor executing it. Then press <kbd>Ctrl</kbd> + <kbd>D</kbd>. What happened ?
+7. Clear the current command line with a keyboard shortcut and then type <kbd>Ctrl</kbd> + <kbd>D</kbd>. What happened ?
+8. Open again a terminal and type <kbd>Ctrl</kbd> + <kbd>P</kbd> several times. Comment.
 9.  Close the terminal using keyboard shortcuts.
 
 ### Exercise 2 : Directories and files
@@ -81,6 +81,11 @@ PS1='$ '
 
     The `.` references the current directory. The `..` references the parent directory.
 
+!!! warning "Where is `~` on my keyboard ?"
+
+    - On Windows keyboard, the `~` character is entered on the keyboard with the key combination <kbd>Alt Gr</kbd> + <kbd>2</kbd>
+    - On Mac keyboard, the `~` character is entered on the keyboard with the key combination <kbd>⌥ Option</kbd> + <kbd>N</kbd>
+
 1. Make sure you are in your home directory and list its contents.
 2. Type the command `mkdir tp_shell` (for *make directory*, i.e. create a directory). List the contents of the home directory and the `tp_shell` directory.
 3. Type the command `mkdir abeilles tp_shell/tp1 ~/arbres`. What did it do ? Among its arguments, which are absolute paths and which are relative paths ? (hint: see the result of `echo ~/arbres`).
@@ -88,7 +93,7 @@ PS1='$ '
 ```bash
 $ mkdir -p vivant/plante/fleur tp_shell/tp1/exos/ex1/
 ```
-5. The `bash` shell (which is your default shell) has a feature that saves a lot of time and avoids typos: automatic completion. It is done with the tabulation key (the key to the left of the `a` key). Enter the following characters (the tabulation key is represented below by `<Tab>`) and see the result in the terminal:
+5. The `bash` shell (which is your default shell) has a feature that saves a lot of time and avoids typos: automatic completion. It is done with the tabulation key (the key to the left of the `a` key). Enter the following characters (the tabulation key <kbd>⇥ Tab</kbd> is represented below by `<Tab>`) and see the result in the terminal:
 ```bash
 $ mkd<Tab> vi<Tab><Tab><Tab>roses
 ```
