@@ -56,7 +56,7 @@ $ echo       Hello,        world!
 ```bash
 PS1='$ '
 ```
-2. Type the command `pwd` (for *print working directory*), that is, display the name of the current directory) and note what is printed on the screen: it is the absolute path of your *home*, personal directory.
+2. Type the command `pwd` (for *print working directory*, that is, display the name of the current directory) and note what is printed on the screen: it is the absolute path of your *home*, personal directory.
 3. Type the command `cd ..` (with a space between `cd` and `..`) and then `pwd`. Repeat these two commands several times until the result remains the same. What happened ?
 4. Type the command `cd` (without argument), then `pwd`. Comment.
 5. Type the command `cd /`, then `pwd` and `ls`.
