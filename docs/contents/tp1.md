@@ -190,6 +190,11 @@ From your home directory, perform the following operations (there are several po
 
 ### Exercise 6 : Getting help
 
+!!! warning "If you are on Windows using WSL"
+    
+    It is possible that the `man` command is not installed on your Debian. In this case, you can install it with the following command `sudo apt install manpages man-db`.
+
+    
 !!! tip "Manual pages"
 
     The `man` command provides help for external commands. For built-in commands, you can use the `help` command.

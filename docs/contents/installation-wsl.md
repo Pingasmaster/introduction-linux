@@ -91,24 +91,28 @@ For this step, you will need to have a folder in your MacOS that you want to sha
     ![Shared folder setting](../../assets/img/shared-folder-setting.png)
 
 6. Now you can turn on your Debian OS by clicking on the *Play* button.
-7. Log in, then on your desktop you should find a *Volume Disk* named `share`. Double click on it and you should retrieve the folder you shared from MacOS.
-8. In this file explorer window, right click and choose *Open in Terminal Here*. Then type the following command:
+7. Log in, then on your desktop you should find a *Volume Disk* named `share`. Double click on it: this is actually the folder you shared from MacOS.
+8. In this file explorer window, right click on the blank space (of your folder) and choose *Open in Terminal Here*. Then type the following command:
 
     ```bash
-    sudo touch file.txt
+    cd ..
+    sudo chmod 777 share
+    cd share
+    touch file.txt
     ```
     !!! note "`sudo` ?"
-        The `sudo` command allows you to execute the command that follows it as an administrator. You will be asked for your password (once per session).
+        - The `sudo` command allows you to execute the command that follows it as an administrator. You will be asked for your password (once per session).
+        - The `chmod 777` command allows you to give all permissions to the folder `share`. This is necessary to be able to write in this folder.
 
-1. Get back into your MacOs file explorer, you should find the file `file.txt` in the folder you shared. Then from there, edit this file using a text editor.
-2. Get back to the Debian terminal, and type the following command:
+9. Get back into your MacOs file explorer, you should find the file `file.txt` in the folder you shared. Then from there, edit this file using a text editor.
+10. Get back to the Debian terminal, and type the following command:
 ```bash
 sudo cat file.txt
 ```
 If you are able to see on the terminal the content of `file.txt`, everything went right and from now you can share files between MacOS and Debian.
 
     !!! tip "Path to the shared directory"
-        In the Debian OS, the path to the shared directory is `/media/share`. Make sure that you remember this :)
+        In the Debian OS, the path to the shared directory is `/media/share`. Make sure that you remember this 😉
 
 
 
