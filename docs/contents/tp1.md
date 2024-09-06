@@ -27,14 +27,13 @@ title: Lab1 - First commands
 
     Every single word in the command line is separated by one or more spaces. The shell interprets the spaces as separators between words. The shell interprets the newline character as the end of the command.
 
-1. Try out the following commands in a terminal. Describe in one sentence its usefulness, indicate the name of the command, its number of arguments and its arguments. For example, the first command is `date`, it has no argument and its usefulness is to display the current date and time.
+1. Try out the following commands in a terminal. Describe in one sentence its usefulness, indicate the name of the command, and its arguments if any. For example, the first command is `date`, it has no mandatory argument and its usefulness is to display the current date and time.
 ```bash
 $ date
 $ cal
 $ cal 3 2022
-$ who
-$ who am i
-$   who  am   i
+$ cal  3   2022
+$ whoami
 $ uname
 $ uname -m -r
 $ uname -mrs
@@ -56,7 +55,7 @@ $ echo       Hello,        world!
 ```bash
 PS1='$ '
 ```
-2. Type the command `pwd` (for *print working directory*, that is, display the name of the current directory) and note what is printed on the screen: it is the absolute path of your *home*, personal directory.
+2. Type the command `pwd` (for *print working directory*, that is, display the name of the current directory) and note what is printed on the screen: it is the absolute path of your user's *home*, personal directory.
 3. Type the command `cd ..` (with a space between `cd` and `..`) and then `pwd`. Repeat these two commands several times until the result remains the same. What happened ?
 4. Type the command `cd` (without argument), then `pwd`. Comment.
 5. Type the command `cd /`, then `pwd` and `ls`.
@@ -65,8 +64,8 @@ PS1='$ '
 8. Type the commands `cd ..`, `pwd` and `ls`.
 9. Type the commands `cd share/man`, then `pwd` and `ls`. Can you guess what some of the displayed results refer to ?
 10. Type the command `ls /bin`. Are some of the names familiar to you ?
-11. The **`~`** character (which is read *tilde*) is entered on the keyboard with the key combination `Alt Gr-2`. Enter the command `echo ~`, then the command `cd ~`. What did the shell do to the character `~` ?
-12. Represent the directories and files mentioned in the exercise as a tree (i.e. as a genealogical tree).
+11. The **`~`** character (which is read *tilde*) is entered on the keyboard with the key combination `Alt Gr-2`. The command `echo` prints any argument given. But first, the shell follows its own rules, like shortcuts and formatting, before running the command. Enter the command `echo ~`, then the command `cd ~`. What did the shell do to the character `~` ?
+12. Represent the directories and files mentioned in the exercise as a tree (i.e. as a genealogical tree) using the command `tree`.
 
 ### Exercise 3 : Manipulating directories and files (1)
 
@@ -77,7 +76,9 @@ PS1='$ '
     There exists two types of paths: absolute and relative.
 
     1. An *absolute* path is based on the root of the tree and starts with `/`, for example: `/home/debian` is the absolute path to the user debian's home directory. It remains valid regardless of the context.
-    2. A *relative* path is relative to the current directory where the user is located. For example, if the current directory is `/home/debian`, the relative path `./Documents` refers to the directory `/home/debian/Documents`. A path that starts with something other than `/` or `~` is a relative path.
+    2. A *relative* path is relative to the current directory where the user is located. This is often used to simplify access to the documents and folders available in the current folder without using the full path, which would be inconvenient. For example, if the current directory is `/home/debian`, the relative path `./Documents` refers to the directory `/home/debian/Documents`. Actually, the `./` in `./Documents` is not mandatory and can be omitted.
+    
+    Any path that starts with something other than `/` or `~` is a relative path, while any path starting by `.`, `..` or nothing is a relative one.
 
     The `.` references the current directory. The `..` references the parent directory.
 
@@ -154,7 +155,7 @@ stateDiagram-v2
     ~ --> Web
     Rapport --> rapport.txt
     Rapport --> Docs
-    Docs --> Afaire
+    Docs --> A_faire
     Docs --> Fait
     Web --> index.html
 ```
@@ -163,7 +164,7 @@ Use the `touch` command to create the normal files and a text editor to give the
 
 From your home directory, perform the following operations (there are several possible solutions):
 
-1. Go directly to `~/Rapport/Docs/Afaire`.
+1. Go directly to `~/Rapport/Docs/A_faire`.
 2. From there, go to `~/Rapport/Docs/Fait` and copy the file `rapport.txt` there. Recall that the current directory can be designated by `.` (a dot).
 3. Rename this copy `rapport_copie.txt`.
 4. Go back to `~/Rapport`.
@@ -228,11 +229,11 @@ From your home directory, perform the following operations (there are several po
 
     There are several types of wildcards, but we will only use the most common ones: `*`, `?` and `[ ]`.
 
-    * `*` can represent a possibily empty string of characters, except if it is the first character of the string and the string starts with a dot (`.`) ;
+    * `*` can represent any possible string, even an empty one, except if it is the first character of the string and the string starts with a dot (`.`) ;
     
     * `[ ]` represents a single character that is in the range of characters specified between the brackets. You can use intervals, like in `[a-z]` which represents a single lowercase letter or in `[0-5]` which represents a single digit between `0` and `5`. You can invert the search by starting the interval with `^`: for instance `[^0-9]` represents a single character that is anything but a digit.
 
-    * `?` represents a single character, except if it is the first character of the string and the string starts with a dot (`.`).
+    * `?` is used to represent any single character, except if it is the first character of the string and the string starts with a dot (`.`).
         
     * You may get further details in `man bash` at the Pathname Expansion section.
     
