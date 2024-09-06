@@ -143,7 +143,38 @@ title: Lab 2 - File system and permissions
     - read and execute for all, no one can write.
     - all permissions for all, no writing for others.
     - read and write for the owner, execution for the group and none for others.
-  
+
+### Exercise 4 : Normal files permissions
+
+1. In a directory of your choice, create two files `f` and `g`. Then enter (for example with a text editor) text in these files.
+2. For you (owner), remove the read permission in the file `f` and the write permission in the file `g`.
+3. Then test the following commands, then note the results:
+    ```bash
+    $ cat f
+    $ cat g
+    ```
+4. Try to modify `g` with a text editor. What happens?
+5. Test the commands:
+    ```bash
+    $ cp f h
+    $ cp g h
+    ```
+    Then observe the content of the file `h` as well as the permissions associated with this file.
+6. The following command allows you to write the string `toto` at the end of the file `f` (we will see it in more detail in a future Lab session):
+    ```bash
+    $ echo "toto" >> f
+    ```
+    Test this command, then give yourself back the read permission on the file `f`. Finally display the content of the file `f` with the `cat` command.
+7. Test the command:
+    ```bash
+    $ rm g
+    ```
+    **Type `n` to refuse**. Finally test the following command:
+    ```bash
+    $ rm -f g
+    ```
+    Did it succeed? What can you deduce from this?
+
 ## Directories permissions
 
 !!! tip "What is a directory ?"
@@ -157,7 +188,7 @@ title: Lab 2 - File system and permissions
       - **execute** `x`: allows you to open the directory (with the `cd` command for example).
 ---
 
-### Exercise 4 : Directories permissions
+### Exercise 5 : Directories permissions
 
 1. Create a directory `rep` and two normal files `a` and `b` inside this directory.
 2. Remove all permissions on the directory `rep` and try the following commands:
@@ -181,12 +212,79 @@ title: Lab 2 - File system and permissions
     $ rm rep/a
     ```
 6. With the set of permissions `-wx` on `rep` for all users, try to:
-   - create a file d in `rep`
-   - rename the file b
-   - remove all permissions associated with the file d
-   - delete the file d
+      - create a file d in `rep`
+      - rename the file b
+      - remove all permissions associated with the file d
+      - delete the file d
+  
+### Exercise 6 : `PATH` diretories
 
-## Default permissions
+!!! warning "Caution"
+
+    This kind of exercise is delicate and important. It must be treated with particular care and taking your time.
+
+1. Open a new terminal and enter the following command:
+    ```bash
+    $ echo $PATH
+    ```
+    Observe the result, in your opinion what do the elements separated by `:` correspond to?
+2. Create a `bin` directory in your home directory and enter the following commands:
+    ```bash
+    $ PATH=~/bin:$PATH
+    $ echo $PATH
+    ```
+    What is the difference with the display with the result of question 1?
+3. Using the `type` command, look for the absolute paths of the `cat` and `rm` programs and note them.
+4. Copy `cat` to `~/bin` by renaming it `rm`.
+5. Create a `fic` file, put some characters in it and create two copies `fic2` and `fic3` of `fic`.
+6. Try to destroy `fic` with the `rm` command. What happened?
+7. Enter the command `$ type rm`.
+8. Run the command
+    ```bash
+    $ <path to rm> fic
+    ```
+    replacing `<path to rm>` with the absolute path to the `rm` command noted in question 3. What happened?
+9. Remove the `x` permission on the `~/bin/rm` file and try to delete `fic2`.
+10. Ask the shell to forget the saved (hashed) locations with the command `$ hash -r`, then enter the commands
+    ```bash
+    $ type rm
+    $ rm fic2
+    ```
+11. Put back the `x` permission on `~/bin/rm` then enter the following commands (where `<path to rm>` denotes the absolute path noted in question 3):
+    ```bash
+    $ ~/bin/rm fic3
+    $ cd ~/bin
+    $ ./rm fic3
+    $ <path to rm> rm
+    $ rm fic3
+    ```
+12. Make a synthesis of this exercise by answering the following questions:
+    -  What is contained in `PATH`?
+    -  In which case is a command name searched in the `PATH` directories?
+    -  If there are several corresponding programs in the `PATH` directories, which one is chosen?
+
+## Sum up on permissions and default permissions
+
+### Exercise 7 : Hands off!
+
+!!! info "Instructions"
+
+    This exercise has to be done on paper, hands off the keyboard!
+
+For each of the following commands, say what permissions are needed for it to succeed (we assume that all directories and files exist, except those we want to create).
+
+```bash
+$ cat /usr/include/stdio.h
+$ cd /usr/include/
+$ ls /usr/include/
+$ echo '/* fin */' >> /usr/include/stdio.h
+$ rm /usr/include/stdio.h
+$ touch /usr/include/ma_bib.h
+$ chmod u+w /usr/include/stdio.h
+$ /usr/bin/uname
+```
+
+### Exercise 8 : Default permissions and `umask` (optional)
 
 !!! tip "What us `umask` ?"
 
@@ -194,7 +292,7 @@ title: Lab 2 - File system and permissions
 
 ---
 
-### Exercise 5 : `umask` (optional)
+
 
 1. In a terminal, type the command `umask` and note the result.
 2. Create a directory `rep` and a file `f` at the same level as `rep`. Display the permissions associated with `rep` and `f` with the command `ls -ld rep f`. Convert these permissions to octal representation and note them. Finally, delete `rep` and `f`.

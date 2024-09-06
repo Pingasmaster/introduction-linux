@@ -45,7 +45,7 @@ This module will be taught in 15 hours as a Lab/Lecture sessions.
 1. [Get yourself a Linux environment](./contents/installation-wsl.md)
 2. [Preliminary reading](./contents/preliminary-reading.md)
 3. [Lab1 - First commands](./contents/tp1.md)
-4. [Lab2 - File System and permissions](#)
+4. [Lab2 - File System and permissions](./contents/tp2.md)
 5. [Lab3 - Working environment](#)
 6. [Lab4 - Text filters, redirections and pipes](#)
 7. [Lab5 - Processes and other commands](#)
